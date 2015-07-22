@@ -1,0 +1,189 @@
+@charset "UTF-8";
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, .zangyi_info p, .daizi_info p, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu { margin: 0; padding: 0; }
+
+header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details { display: block; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th { text-align: left; font-weight: normal; }
+
+html, body, fieldset, img, iframe, abbr { border: 0; }
+
+i, .zangyi_body ul li .number span i, .zangyi_body ul .zangyi_info p .number span i, .zangyi_info .zangyi_body ul p .number span i, .zangyi_body ul .daizi_info p .number span i, .daizi_info .zangyi_body ul p .number span i, cite, em, var, address, dfn { font-style: normal; }
+
+[hidefocus], summary { outline: 0; }
+
+li, .zangyi_info p, .daizi_info p { list-style: none; }
+
+h1, h2, h3, h4, h5, h6, small { font-size: 100%; }
+
+sup, sub { font-size: 83%; }
+
+pre, code, kbd, samp { font-family: inherit; }
+
+q:before, q:after { content: none; }
+
+textarea { overflow: auto; resize: none; }
+
+label, summary { cursor: default; }
+
+a, button { cursor: pointer; }
+
+h1, h2, h3, h4, h5, h6, em, strong, b { font-weight: normal; }
+
+del, ins, u, s, a, a:hover { text-decoration: none; }
+
+address, caption, cite, code, dfn, em, th, var, i, .zangyi_body ul li .number span i, .zangyi_body ul .zangyi_info p .number span i, .zangyi_info .zangyi_body ul p .number span i, .zangyi_body ul .daizi_info p .number span i, .daizi_info .zangyi_body ul p .number span i { font-style: normal; font-weight: normal; }
+
+input, textarea, button, select { -webkit-appearance: none; -moz-appearance: none; }
+
+body, textarea, input, button, select { font: 12px/1.14 arial,\5b8b\4f53; color: #333; outline: 0; }
+
+body { background: #fff; }
+
+a, a:hover { color: #333; }
+
+a, img { -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */ }
+
+html, body { -webkit-user-select: none; /* 禁止选中文本（如无文本选中需求，此为必选项） */ user-select: none; }
+
+.clear { clear: both; width: 100%; }
+
+html { font-size: 20px; }
+
+@media only screen and (min-width: 360px) { html { font-size: 22.5px !important; } }
+@media only screen and (min-width: 375px) { html { font-size: 23.4375px !important; } }
+@media only screen and (min-width: 384px) { html { font-size: 24px !important; } }
+@media only screen and (min-width: 401px) { html { font-size: 25px !important; } }
+@media only screen and (min-width: 414px) { html { font-size: 25.875px !important; } }
+@media only screen and (min-width: 428px) { html { font-size: 26.75px !important; } }
+@media only screen and (min-width: 481px) { html { font-size: 30px !important; } }
+@media only screen and (min-width: 569px) { html { font-size: 35px !important; } }
+@media only screen and (min-width: 641px) { html { font-size: 40px !important; } }
+/*表单控件美化*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) { input[type="checkbox"], select, input[type="radio"] { position: relative; -webkit-appearance: none; -webkit-user-select: none; border: 1px solid rgba(0, 0, 0, 0.25); border-radius: 2px; /*box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.75);margin: 0 1px 0 0;*/ }
+  input[type='checkbox'] { bottom: 2px; height: 15px; vertical-align: middle; width: 15px; }
+  input[type='checkbox']:checked::before { position: absolute; left: 3px; top: 6px; content: ''; height: 2px; background-color: #f44623; width: 72%; -webkit-transform: rotate(120deg); }
+  input[type='checkbox']:checked::after { position: absolute; left: 2px; top: 8px; content: ''; height: 2px; width: 4px; background-color: #f44623; -webkit-transform: rotate(-150deg); }
+  input[type="radio"] { border-radius: 100%; height: 20px; vertical-align: middle; width: 20px; bottom: 1px; margin-right: 3px; }
+  input[type='radio']:checked::before { background-color: #f44623; border-radius: 100%; bottom: 3px; content: ''; display: block; left: 3px; position: absolute; right: 3px; top: 3px; }
+  input[type='checkbox']:active, select:active, input[type='radio']:active { background-image: -webkit-linear-gradient(#fcfcfc, #f8f8f8 38%, #e7e7e7); box-shadow: none; text-shadow: none; }
+  select { -webkit-appearance: none; height: 28px; -webkit-padding-end: 18px; -webkit-padding-start: 6px; background-position: right center; background-repeat: no-repeat; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAaUlEQVQoz2P4//8/A7UwdkEGhiggTsODo4g2LBEImJmZvwE1/UfHIHGQPNGGAbHCggULFrKxsf1ENgjEB4mD5EnxJoaByAZB5Yk3DNlAPj6+L8gGkWUYzMC3b982IRtEtmFQjaxYxDAwAGi4TwMYKNLfAAAAAElFTkSuQmCC"), -webkit-linear-gradient(#fcfcfc, #fcfcfc 38%, #fcfcfc); }
+  select:hover { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAaUlEQVQoz2P4//8/A7UwdkEGhiggTsODo4g2LBEImJmZvwE1/UfHIHGQPNGGAbHCggULFrKxsf1ENgjEB4mD5EnxJoaByAZB5Yk3DNlAPj6+L8gGkWUYzMC3b982IRtEtmFQjaxYxDAwAGi4TwMYKNLfAAAAAElFTkSuQmCC"); }
+  select:active { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAaUlEQVQoz2P4//8/A7UwdkEGhiggTsODo4g2LBEImJmZvwE1/UfHIHGQPNGGAbHCggULFrKxsf1ENgjEB4mD5EnxJoaByAZB5Yk3DNlAPj6+L8gGkWUYzMC3b982IRtEtmFQjaxYxDAwAGi4TwMYKNLfAAAAAElFTkSuQmCC"); }
+  select:disabled { color: #999; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAaUlEQVQoz2P4//8/A7UwdkEGhiggTsODo4g2LBEImJmZvwE1/UfHIHGQPNGGAbHCggULFrKxsf1ENgjEB4mD5EnxJoaByAZB5Yk3DNlAPj6+L8gGkWUYzMC3b982IRtEtmFQjaxYxDAwAGi4TwMYKNLfAAAAAElFTkSuQmCC"), -webkit-linear-gradient(#f8f8f8, #f8f8f8 38%, #f8f8f8); } }
+@font-face { font-family: "iconfont"; src: url("iconfont.eot");
+  /* IE9*/
+  src: url("iconfont.eot?#iefix") format("embedded-opentype"), url("iconfont.woff") format("woff"), url("iconfont.ttf") format("truetype"), url("iconfont.svg#iconfont") format("svg");
+  /* iOS 4.1- */ }
+.iconfont { font-family: "iconfont" !important; font-style: normal; -webkit-font-smoothing: antialiased; -webkit-text-stroke-width: 0; -moz-osx-font-smoothing: grayscale; }
+
+/* .icon-houtui:before { content: "\e600"; } */
+.icon-shouye:before { content: "\e601"; }
+
+.icon-wo:before { content: "\e602"; }
+
+.icon-quanbudingdan:before { content: "\e603"; }
+
+.icon-chaxun:before { content: "\e604"; }
+
+.icon-wentizixun:before { content: "\e605"; }
+
+.icon-fanwei:before { content: "\e606"; }
+
+.icon-yijianfankui:before { content: "\e608"; }
+
+.icon-lianxizixun:before { content: "\e609"; }
+
+.icon-shouz:before { content: "\e60e"; }
+
+.icon-yifu:before { content: "\e607"; }
+
+.icon-shopping:before { content: "\e60a"; }
+
+.icon-wuliuxingye:before { content: "\e60b"; }
+
+.icon-dingdan:before { content: "\e60c"; }
+
+.icon-sort:before { content: "\e60d"; }
+
+.icon-baodijine:before { content: "\e60f"; }
+
+.icon-shijian:before { content: "\e610"; }
+
+body { font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif; background: #fff; }
+
+.warp { width: 16rem; overflow: hidden; padding-bottom: 2.5rem; }
+
+.header { height: 2.5rem; color: #fff; line-height: 2.5rem; background: #2196f3; padding: 0 .7rem; }
+.header .logo { width: 4.8rem; float: left; text-indent: -99rem; font-size: 0.75rem; background: url(../images/applogo.png) no-repeat left; background-size: 100%; }
+.header .details { font-size: 0.9rem; height: 2.5rem; background: url(../images/left.png) no-repeat left; background-size: .8rem; }
+.header .details .icon-houtui, .header .details .icon-houtui:before { font-size: 0.75rem; color: #fff; padding-left: 1.6rem; }
+.header span a { display: block; float: right; font-size: 0.75rem; color: #fff; }
+
+.zangyi_tab, .paidan_tab { width: 16rem; height: 2.2rem; border-bottom: 0.05rem solid #d5d5d5; }
+.zangyi_tab li, .paidan_tab li, .zangyi_tab .zangyi_info p, .zangyi_info .zangyi_tab p, .paidan_tab .zangyi_info p, .zangyi_info .paidan_tab p, .zangyi_tab .daizi_info p, .daizi_info .zangyi_tab p, .paidan_tab .daizi_info p, .daizi_info .paidan_tab p { height: 2.1rem; line-height: 2.1rem; float: left; text-align: center; font-size: 0.7rem; border-bottom: .1rem solid #fff; position: relative; }
+.zangyi_tab li i, .paidan_tab li i, .zangyi_tab .zangyi_info p i, .zangyi_info .zangyi_tab p i, .paidan_tab .zangyi_info p i, .zangyi_info .paidan_tab p i, .zangyi_tab .daizi_info p i, .daizi_info .zangyi_tab p i, .paidan_tab .daizi_info p i, .daizi_info .paidan_tab p i, .zangyi_tab .zangyi_body ul li .number span i, .zangyi_body ul .zangyi_tab li .number span i, .paidan_tab .zangyi_body ul li .number span i, .zangyi_body ul .paidan_tab li .number span i, .zangyi_body ul li .number span .zangyi_tab .zangyi_info p i, .zangyi_body ul li .number span .zangyi_info .zangyi_tab p i, .zangyi_body ul li .number span .paidan_tab .zangyi_info p i, .zangyi_body ul li .number span .zangyi_info .paidan_tab p i, .zangyi_body ul li .number span .zangyi_tab .daizi_info p i, .zangyi_body ul li .number span .daizi_info .zangyi_tab p i, .zangyi_body ul li .number span .paidan_tab .daizi_info p i, .zangyi_body ul li .number span .daizi_info .paidan_tab p i, .zangyi_body ul .zangyi_info p .number span .zangyi_tab li i, .zangyi_body ul .zangyi_info p .number span .paidan_tab li i, .zangyi_tab .zangyi_body ul .zangyi_info p .number span i, .zangyi_body ul .zangyi_tab .zangyi_info p .number span i, .zangyi_body ul .zangyi_info .zangyi_tab p .number span i, .paidan_tab .zangyi_body ul .zangyi_info p .number span i, .zangyi_body ul .paidan_tab .zangyi_info p .number span i, .zangyi_body ul .zangyi_info .paidan_tab p .number span i, .zangyi_info .zangyi_body ul p .number span .zangyi_tab li i, .zangyi_info .zangyi_body ul p .number span .paidan_tab li i, .zangyi_tab .zangyi_info .zangyi_body ul p .number span i, .zangyi_info .zangyi_tab .zangyi_body ul p .number span i, .zangyi_info .zangyi_body ul .zangyi_tab p .number span i, .paidan_tab .zangyi_info .zangyi_body ul p .number span i, .zangyi_info .paidan_tab .zangyi_body ul p .number span i, .zangyi_info .zangyi_body ul .paidan_tab p .number span i, .zangyi_body ul .daizi_info p .number span .zangyi_tab li i, .zangyi_body ul .daizi_info p .number span .paidan_tab li i, .zangyi_tab .zangyi_body ul .daizi_info p .number span i, .zangyi_body ul .zangyi_tab .daizi_info p .number span i, .zangyi_body ul .daizi_info .zangyi_tab p .number span i, .paidan_tab .zangyi_body ul .daizi_info p .number span i, .zangyi_body ul .paidan_tab .daizi_info p .number span i, .zangyi_body ul .daizi_info .paidan_tab p .number span i, .daizi_info .zangyi_body ul p .number span .zangyi_tab li i, .daizi_info .zangyi_body ul p .number span .paidan_tab li i, .zangyi_tab .daizi_info .zangyi_body ul p .number span i, .daizi_info .zangyi_tab .zangyi_body ul p .number span i, .daizi_info .zangyi_body ul .zangyi_tab p .number span i, .paidan_tab .daizi_info .zangyi_body ul p .number span i, .daizi_info .paidan_tab .zangyi_body ul p .number span i, .daizi_info .zangyi_body ul .paidan_tab p .number span i { width: 0.9rem; height: 0.9rem; line-height: 0.95rem; background: rgba(255, 51, 0, 0.85); border-radius: 100%; position: absolute; right: .3rem; top: .3rem; color: #fff; text-align: center; font-size: 0.6rem; display: none; }
+.zangyi_tab .tab_on, .paidan_tab .tab_on { border-bottom: 0.1rem solid #2196f3; }
+
+.zangyi_body { width: 16rem; }
+.zangyi_body ul { display: none; }
+.zangyi_body ul li, .zangyi_body ul .zangyi_info p, .zangyi_info .zangyi_body ul p, .zangyi_body ul .daizi_info p, .daizi_info .zangyi_body ul p { position: relative; padding: .7rem; background: #fff; overflow: hidden; border-bottom: .05rem solid #e7e7e7; }
+.zangyi_body ul li img, .zangyi_body ul .zangyi_info p img, .zangyi_info .zangyi_body ul p img, .zangyi_body ul .daizi_info p img, .daizi_info .zangyi_body ul p img { width: 4rem; height: 4rem; float: left; margin-right: .8rem; }
+.zangyi_body ul li h1, .zangyi_body ul .zangyi_info p h1, .zangyi_info .zangyi_body ul p h1, .zangyi_body ul .daizi_info p h1, .daizi_info .zangyi_body ul p h1 { font-size: 0.75rem; }
+.zangyi_body ul li p, .zangyi_body ul .zangyi_info p p, .zangyi_info .zangyi_body ul p p, .zangyi_body ul .daizi_info p p, .daizi_info .zangyi_body ul p p { font-size: 0.55rem; color: #757575; margin-top: .3rem; line-height: .8rem; }
+.zangyi_body ul li .jiage, .zangyi_body ul .zangyi_info p .jiage, .zangyi_info .zangyi_body ul p .jiage, .zangyi_body ul .daizi_info p .jiage, .daizi_info .zangyi_body ul p .jiage { width: 9.8rem; position: absolute; left: 5.5rem; bottom: .7rem; font-size: 0.7rem; line-height: 1.2rem; }
+.zangyi_body ul li .jiage b, .zangyi_body ul .zangyi_info p .jiage b, .zangyi_info .zangyi_body ul p .jiage b, .zangyi_body ul .daizi_info p .jiage b, .daizi_info .zangyi_body ul p .jiage b { font-size: 0.75rem; color: #f60; margin-right: .2rem; }
+.zangyi_body ul li:active, .zangyi_body ul .zangyi_info p:active, .zangyi_info .zangyi_body ul p:active, .zangyi_body ul .daizi_info p:active, .daizi_info .zangyi_body ul p:active, .zangyi_body ul li:visited, .zangyi_body ul .zangyi_info p:visited, .zangyi_info .zangyi_body ul p:visited, .zangyi_body ul .daizi_info p:visited, .daizi_info .zangyi_body ul p:visited { color: #333; }
+.zangyi_body ul li .number, .zangyi_body ul .zangyi_info p .number, .zangyi_info .zangyi_body ul p .number, .zangyi_body ul .daizi_info p .number, .daizi_info .zangyi_body ul p .number { position: absolute; right: .7rem; bottom: .7rem; line-height: 1.1rem; }
+.zangyi_body ul li .number i, .zangyi_body ul .zangyi_info p .number i, .zangyi_info .zangyi_body ul p .number i, .zangyi_body ul .daizi_info p .number i, .daizi_info .zangyi_body ul p .number i, .zangyi_body ul li .number span i { width: 1.2rem; height: 1.1rem; background: #2196f3; border: 0.05rem solid #2196f3; border-radius: .3rem; font-size: 1.25rem; color: #fff; text-align: center; display: block; float: left; }
+.zangyi_body ul li .number span, .zangyi_body ul .zangyi_info p .number span, .zangyi_info .zangyi_body ul p .number span, .zangyi_body ul .daizi_info p .number span, .daizi_info .zangyi_body ul p .number span { display: none; }
+.zangyi_body ul li .number span strong, .zangyi_body ul .zangyi_info p .number span strong, .zangyi_info .zangyi_body ul p .number span strong, .zangyi_body ul .daizi_info p .number span strong, .daizi_info .zangyi_body ul p .number span strong { width: 1.2rem; height: 1.1rem; border-radius: .3rem; text-align: center; float: left; display: block; line-height: 1.2rem; font-size: 0.75rem; background: #fff; color: #2196f3; border: 0.05rem solid #2196f3; margin: 0 .25rem; }
+.zangyi_body ul li .number span i, .zangyi_body ul .zangyi_info p .number span i, .zangyi_info .zangyi_body ul p .number span i, .zangyi_body ul .daizi_info p .number span i, .daizi_info .zangyi_body ul p .number span i { line-height: .9rem; color: #2196f3; background: #fff; border: 0.05rem solid #2196f3; }
+
+.paidan_tab li, .paidan_tab .zangyi_info p, .zangyi_info .paidan_tab p, .paidan_tab .daizi_info p, .daizi_info .paidan_tab p { width: 8rem; }
+
+.paidan_body { background: #f1f1f1; overflow: hidden; }
+.paidan_body ul li, .paidan_body ul .zangyi_info p, .zangyi_info .paidan_body ul p, .paidan_body ul .daizi_info p, .daizi_info .paidan_body ul p { background: #fff; box-shadow: 0 0 0.1rem #d5d5d5; margin: .5rem 0; padding: .7rem !important; }
+.paidan_body ul a { display: block; }
+.paidan_body ul a:active, .paidan_body ul a:visited { color: #333; }
+
+.zangyi_box { background: #f1f1f1; overflow: hidden; }
+
+.code, .paidan_body ul li, .paidan_body ul .zangyi_info p, .zangyi_info .paidan_body ul p, .paidan_body ul .daizi_info p, .daizi_info .paidan_body ul p { line-height: 1rem; padding: .5rem .75rem; font-size: 0.65rem; background: #fff; box-shadow: 0 0 0.1rem #d5d5d5; }
+.code i, .paidan_body ul li i, .paidan_body ul .zangyi_info p i, .zangyi_info .paidan_body ul p i, .paidan_body ul .daizi_info p i, .daizi_info .paidan_body ul p i, .code .zangyi_body ul li .number span i, .zangyi_body ul li .number span .code i, .paidan_body .zangyi_body ul li .number span i, .zangyi_body .paidan_body ul li .number span i, .code .zangyi_body ul .zangyi_info p .number span i, .zangyi_body ul .zangyi_info p .number span .code i, .paidan_body .zangyi_body ul .zangyi_info p .number span i, .zangyi_body .paidan_body ul .zangyi_info p .number span i, .code .zangyi_info .zangyi_body ul p .number span i, .zangyi_info .zangyi_body ul p .number span .code i, .paidan_body .zangyi_info .zangyi_body ul p .number span li i, .paidan_body ul .zangyi_info .zangyi_body ul p .number span i, .zangyi_info .paidan_body .zangyi_body ul p .number span i, .zangyi_info .zangyi_body .paidan_body ul p .number span i, .code .zangyi_body ul .daizi_info p .number span i, .zangyi_body ul .daizi_info p .number span .code i, .paidan_body .zangyi_body ul .daizi_info p .number span i, .zangyi_body .paidan_body ul .daizi_info p .number span i, .code .daizi_info .zangyi_body ul p .number span i, .daizi_info .zangyi_body ul p .number span .code i, .paidan_body .daizi_info .zangyi_body ul p .number span li i, .paidan_body ul .daizi_info .zangyi_body ul p .number span i, .daizi_info .paidan_body .zangyi_body ul p .number span i, .daizi_info .zangyi_body .paidan_body ul p .number span i { float: right; margin-bottom: .3rem; }
+.code span, .paidan_body ul li span, .paidan_body ul .zangyi_info p span, .zangyi_info .paidan_body ul p span, .paidan_body ul .daizi_info p span, .daizi_info .paidan_body ul p span { color: #757575; font-size: 0.6rem; }
+
+.zangyi_info, .daizi_info { margin: .5rem 0; background: #fff; box-shadow: 0 0 0.1rem #d5d5d5; padding: .7rem; }
+.zangyi_info h1, .daizi_info h1 { font-size: 0.75rem; font-weight: bold; color: #666; margin-bottom: 1rem; }
+.zangyi_info li, .daizi_info li, .zangyi_info p, .daizi_info p { font-size: 0; text-align: justify; line-height: 1rem; }
+.zangyi_info li span, .daizi_info li span, .zangyi_info p span, .daizi_info p span { width: 33.33%; display: inline-block; font-size: 0.65rem; }
+.zangyi_info li span:nth-last-child(1), .daizi_info li span:nth-last-child(1), .zangyi_info p span:nth-last-child(1), .daizi_info p span:nth-last-child(1) { text-align: right; }
+.zangyi_info li span:nth-last-child(2), .daizi_info li span:nth-last-child(2), .zangyi_info p span:nth-last-child(2), .daizi_info p span:nth-last-child(2) { text-align: center; }
+.zangyi_info p, .daizi_info p { padding-top: .5rem; margin-top: .5rem; border-top: 0.05rem solid #d5d5d5; }
+.zangyi_info p span:nth-last-child(1), .daizi_info p span:nth-last-child(1), .zangyi_info p span:nth-last-child(2), .daizi_info p span:nth-last-child(2) { color: #f33; }
+
+.daizi_info { margin-bottom: 0; }
+.daizi_info textarea { width: 13.3rem; font-size: 0.6rem; padding: .5rem .6rem; margin-bottom: .7rem; border: .05rem solid #ddd; height: 3.5rem; line-height: 1rem; border-radius: .2rem; }
+.daizi_info input[type="submit"] { width: 14.6rem; border: none; font-size: 0.6rem; text-align: center; border-radius: .15rem; padding: .6rem 0; margin: .2rem 0 .2rem; background: #2196f3; display: block; color: #fff; }
+
+.why { font-size: 0.6rem; border: none; height: 3.5rem; line-height: 1rem; border-radius: .2rem; }
+
+.user, .password { margin: 1.5rem .7rem .8rem; width: 14.6rem; height: 2.1rem; margin: .7rem; background: #fff; border: .05rem solid #e3e3e3; border-radius: .15rem; overflow: hidden; }
+.user input, .password input { border: none; font-size: 0.65rem; height: .7rem; line-height: .9rem; padding: .7rem; width: 11.4rem; background: url(../images/login.png) no-repeat 6% center; background-size: .85rem; padding-left: 2.5rem; color: #757575; }
+
+.password { margin: .8rem .7rem 1.4rem; }
+.password input { background: url(../images/password.png) no-repeat 6% center; background-size: .75rem; padding-left: 2.5rem; }
+
+.login { width: 14.6rem; margin: .8rem .7rem; }
+.login a { font-size: 0.7rem; text-align: center; border-radius: .15rem; padding: .5rem 0; background: #2196f3; display: block; color: #fff; }
+.login input[type="submit"] { width: 14.6rem; border: none; font-size: 0.6rem; text-align: center; border-radius: .15rem; padding: .6rem 0; background: #2196f3; display: block; color: #fff; }
+.login p { font-size: 0.6rem; color: #333; line-height: 1rem; margin-bottom: .5rem; }
+
+.foot_nav { width: 16rem; position: fixed; bottom: 0rem; display: block; z-index: 999; height: 2.3rem; padding-top: .2rem; border-top: .05rem solid #e7e7e7; background: #fff; }
+.foot_nav li, .foot_nav .zangyi_info p, .zangyi_info .foot_nav p, .foot_nav .daizi_info p, .daizi_info .foot_nav p { width: 5.33333rem; float: left; text-align: center; position: relative; }
+.foot_nav li a, .foot_nav .zangyi_info p a, .zangyi_info .foot_nav p a, .foot_nav .daizi_info p a, .daizi_info .foot_nav p a { display: block; font-size: 0.6rem; color: #757575; }
+.foot_nav li i, .foot_nav .zangyi_info p i, .zangyi_info .foot_nav p i, .foot_nav .daizi_info p i, .daizi_info .foot_nav p i, .foot_nav .zangyi_body ul li .number span i, .zangyi_body ul .foot_nav li .number span i, .zangyi_body ul li .number span .foot_nav .zangyi_info p i, .zangyi_body ul li .number span .zangyi_info .foot_nav p i, .zangyi_body ul li .number span .foot_nav .daizi_info p i, .zangyi_body ul li .number span .daizi_info .foot_nav p i, .zangyi_body ul .zangyi_info p .number span .foot_nav li i, .foot_nav .zangyi_body ul .zangyi_info p .number span i, .zangyi_body ul .foot_nav .zangyi_info p .number span i, .zangyi_body ul .zangyi_info .foot_nav p .number span i, .zangyi_info .zangyi_body ul p .number span .foot_nav li i, .foot_nav .zangyi_info .zangyi_body ul p .number span i, .zangyi_info .foot_nav .zangyi_body ul p .number span i, .zangyi_info .zangyi_body ul .foot_nav p .number span i, .zangyi_body ul .daizi_info p .number span .foot_nav li i, .foot_nav .zangyi_body ul .daizi_info p .number span i, .zangyi_body ul .foot_nav .daizi_info p .number span i, .zangyi_body ul .daizi_info .foot_nav p .number span i, .daizi_info .zangyi_body ul p .number span .foot_nav li i, .foot_nav .daizi_info .zangyi_body ul p .number span i, .daizi_info .foot_nav .zangyi_body ul p .number span i, .daizi_info .zangyi_body ul .foot_nav p .number span i { width: 0.9rem; height: 0.9rem; line-height: 0.95rem; display: block; background: rgba(255, 51, 0, 0.85); border-radius: 100%; position: absolute; right: 1.7rem; top: 0rem; display: none; color: #fff; text-align: center; font-size: 0.6rem; }
+.foot_nav .icon-shouye:before, .foot_nav .icon-yifu:before, .foot_nav .icon-quanbudingdan:before { font-size: 1.25rem; }
+.foot_nav .nav_on { color: #2196f3; }
+.foot_nav .show { display: block; }

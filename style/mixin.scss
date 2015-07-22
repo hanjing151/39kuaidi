@@ -1,0 +1,32 @@
+//透明度样式
+@mixin alpha($alpah){
+	 filter:alpha(opacity=$alpah * 100);  
+     -moz-opacity:$alpah;  
+     -khtml-opacity: $alpah;  
+     opacity: $alpah;  
+}
+//旋转
+@mixin deg($deg){
+	transform:rotate($deg);
+	-ms-transform:rotate($deg); /* Internet Explorer */
+	-moz-transform:rotate($deg); /* Firefox */
+	-webkit-transform:rotate($deg); /* Safari 和 Chrome */
+	-o-transform:rotate($deg); /* Opera */
+}
+//过渡动画
+@mixin guodu($attr,$time){
+transition:$attr $time;
+-moz-transition:$attr $time; /* Firefox 4 */
+-webkit-transition:$attr $time; /* Safari and Chrome */
+-o-transition:$attr $time; /* Opera */
+}
+//rem
+@mixin font_rem($num){
+	font-size : $num / 40 + rem ;
+}
+@mixin width_rem($num){
+	width : $num / 40 + rem ;
+}
+@mixin height_rem($num){
+	height : $num / 40 + rem ;
+}

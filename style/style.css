@@ -1,5 +1,5 @@
 @charset "UTF-8";
-html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, .zangyi_info p, .daizi_info p, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu { margin: 0; padding: 0; }
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu { margin: 0; padding: 0; }
 
 header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details { display: block; }
 
@@ -9,11 +9,11 @@ caption, th { text-align: left; font-weight: normal; }
 
 html, body, fieldset, img, iframe, abbr { border: 0; }
 
-i, .zangyi_body ul li .number span i, .zangyi_body ul .zangyi_info p .number span i, .zangyi_info .zangyi_body ul p .number span i, .zangyi_body ul .daizi_info p .number span i, .daizi_info .zangyi_body ul p .number span i, cite, em, var, address, dfn { font-style: normal; }
+i, cite, em, var, address, dfn { font-style: normal; }
 
 [hidefocus], summary { outline: 0; }
 
-li, .zangyi_info p, .daizi_info p { list-style: none; }
+li { list-style: none; }
 
 h1, h2, h3, h4, h5, h6, small { font-size: 100%; }
 
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6, em, strong, b { font-weight: normal; }
 
 del, ins, u, s, a, a:hover { text-decoration: none; }
 
-address, caption, cite, code, dfn, em, th, var, i, .zangyi_body ul li .number span i, .zangyi_body ul .zangyi_info p .number span i, .zangyi_info .zangyi_body ul p .number span i, .zangyi_body ul .daizi_info p .number span i, .daizi_info .zangyi_body ul p .number span i { font-style: normal; font-weight: normal; }
+address, caption, cite, code, dfn, em, th, var, i { font-style: normal; font-weight: normal; }
 
 input, textarea, button, select { -webkit-appearance: none; -moz-appearance: none; }
 
@@ -113,61 +113,76 @@ html { font-size: 20px; }
 
 body { font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif; background: #fff; }
 
-.warp { width: 16rem; overflow: hidden; padding-bottom: 2.5rem; }
+.warp { width: 16rem; overflow: hidden; }
 
 .header { height: 2.5rem; color: #fff; line-height: 2.5rem; background: #2196f3; padding: 0 .7rem; }
 .header .logo { width: 4.8rem; float: left; text-indent: -99rem; font-size: 0.75rem; background: url(../images/applogo.png) no-repeat left; background-size: 100%; }
 .header .details { font-size: 0.9rem; height: 2.5rem; background: url(../images/left.png) no-repeat left; background-size: .8rem; }
 .header .details .icon-houtui, .header .details .icon-houtui:before { font-size: 0.75rem; color: #fff; padding-left: 1.6rem; }
-.header span a { display: block; float: right; font-size: 0.75rem; color: #fff; }
+.header span { display: block; float: right; font-size: 0.75rem; color: #fff; }
 
-.zangyi_tab, .paidan_tab { width: 16rem; height: 2.2rem; border-bottom: 0.05rem solid #d5d5d5; }
-.zangyi_tab li, .paidan_tab li, .zangyi_tab .zangyi_info p, .zangyi_info .zangyi_tab p, .paidan_tab .zangyi_info p, .zangyi_info .paidan_tab p, .zangyi_tab .daizi_info p, .daizi_info .zangyi_tab p, .paidan_tab .daizi_info p, .daizi_info .paidan_tab p { height: 2.1rem; line-height: 2.1rem; float: left; text-align: center; font-size: 0.7rem; border-bottom: .1rem solid #fff; position: relative; }
-.zangyi_tab li i, .paidan_tab li i, .zangyi_tab .zangyi_info p i, .zangyi_info .zangyi_tab p i, .paidan_tab .zangyi_info p i, .zangyi_info .paidan_tab p i, .zangyi_tab .daizi_info p i, .daizi_info .zangyi_tab p i, .paidan_tab .daizi_info p i, .daizi_info .paidan_tab p i, .zangyi_tab .zangyi_body ul li .number span i, .zangyi_body ul .zangyi_tab li .number span i, .paidan_tab .zangyi_body ul li .number span i, .zangyi_body ul .paidan_tab li .number span i, .zangyi_body ul li .number span .zangyi_tab .zangyi_info p i, .zangyi_body ul li .number span .zangyi_info .zangyi_tab p i, .zangyi_body ul li .number span .paidan_tab .zangyi_info p i, .zangyi_body ul li .number span .zangyi_info .paidan_tab p i, .zangyi_body ul li .number span .zangyi_tab .daizi_info p i, .zangyi_body ul li .number span .daizi_info .zangyi_tab p i, .zangyi_body ul li .number span .paidan_tab .daizi_info p i, .zangyi_body ul li .number span .daizi_info .paidan_tab p i, .zangyi_body ul .zangyi_info p .number span .zangyi_tab li i, .zangyi_body ul .zangyi_info p .number span .paidan_tab li i, .zangyi_tab .zangyi_body ul .zangyi_info p .number span i, .zangyi_body ul .zangyi_tab .zangyi_info p .number span i, .zangyi_body ul .zangyi_info .zangyi_tab p .number span i, .paidan_tab .zangyi_body ul .zangyi_info p .number span i, .zangyi_body ul .paidan_tab .zangyi_info p .number span i, .zangyi_body ul .zangyi_info .paidan_tab p .number span i, .zangyi_info .zangyi_body ul p .number span .zangyi_tab li i, .zangyi_info .zangyi_body ul p .number span .paidan_tab li i, .zangyi_tab .zangyi_info .zangyi_body ul p .number span i, .zangyi_info .zangyi_tab .zangyi_body ul p .number span i, .zangyi_info .zangyi_body ul .zangyi_tab p .number span i, .paidan_tab .zangyi_info .zangyi_body ul p .number span i, .zangyi_info .paidan_tab .zangyi_body ul p .number span i, .zangyi_info .zangyi_body ul .paidan_tab p .number span i, .zangyi_body ul .daizi_info p .number span .zangyi_tab li i, .zangyi_body ul .daizi_info p .number span .paidan_tab li i, .zangyi_tab .zangyi_body ul .daizi_info p .number span i, .zangyi_body ul .zangyi_tab .daizi_info p .number span i, .zangyi_body ul .daizi_info .zangyi_tab p .number span i, .paidan_tab .zangyi_body ul .daizi_info p .number span i, .zangyi_body ul .paidan_tab .daizi_info p .number span i, .zangyi_body ul .daizi_info .paidan_tab p .number span i, .daizi_info .zangyi_body ul p .number span .zangyi_tab li i, .daizi_info .zangyi_body ul p .number span .paidan_tab li i, .zangyi_tab .daizi_info .zangyi_body ul p .number span i, .daizi_info .zangyi_tab .zangyi_body ul p .number span i, .daizi_info .zangyi_body ul .zangyi_tab p .number span i, .paidan_tab .daizi_info .zangyi_body ul p .number span i, .daizi_info .paidan_tab .zangyi_body ul p .number span i, .daizi_info .zangyi_body ul .paidan_tab p .number span i { width: 0.9rem; height: 0.9rem; line-height: 0.95rem; background: rgba(255, 51, 0, 0.85); border-radius: 100%; position: absolute; right: .3rem; top: .3rem; color: #fff; text-align: center; font-size: 0.6rem; display: none; }
-.zangyi_tab .tab_on, .paidan_tab .tab_on { border-bottom: 0.1rem solid #2196f3; }
+.zangyi_info { width: 16rem; font-size: 0.7rem; }
+.zangyi_info ul { padding: .4rem .7rem; }
+.zangyi_info h2 { text-align: center; line-height: 6rem; font-size: 1rem; color: #ccc; }
+.zangyi_info li { display: block; line-height: 2rem; border-bottom: 0.05rem dashed #d5d5d5; }
+.zangyi_info li i { float: right; margin-right: .8rem; color: #f33; }
+.zangyi_info li span { width: .85rem; height: .85rem; line-height: .8rem; text-align: center; display: block; margin-top: .6rem; float: right; font-size: 0.6rem; background: #fa0; border-radius: 100%; color: #fff; }
+.zangyi_info p { padding: .5rem .7rem; }
+.zangyi_info p i { float: right; }
+.zangyi_info p b { margin: 0 .3rem; color: #f33; }
 
-.zangyi_body { width: 16rem; }
-.zangyi_body ul { display: none; }
-.zangyi_body ul li, .zangyi_body ul .zangyi_info p, .zangyi_info .zangyi_body ul p, .zangyi_body ul .daizi_info p, .daizi_info .zangyi_body ul p { position: relative; padding: .7rem; background: #fff; overflow: hidden; border-bottom: .05rem solid #e7e7e7; }
-.zangyi_body ul li img, .zangyi_body ul .zangyi_info p img, .zangyi_info .zangyi_body ul p img, .zangyi_body ul .daizi_info p img, .daizi_info .zangyi_body ul p img { width: 4rem; height: 4rem; float: left; margin-right: .8rem; }
-.zangyi_body ul li h1, .zangyi_body ul .zangyi_info p h1, .zangyi_info .zangyi_body ul p h1, .zangyi_body ul .daizi_info p h1, .daizi_info .zangyi_body ul p h1 { font-size: 0.75rem; }
-.zangyi_body ul li p, .zangyi_body ul .zangyi_info p p, .zangyi_info .zangyi_body ul p p, .zangyi_body ul .daizi_info p p, .daizi_info .zangyi_body ul p p { font-size: 0.55rem; color: #757575; margin-top: .3rem; line-height: .8rem; }
-.zangyi_body ul li .jiage, .zangyi_body ul .zangyi_info p .jiage, .zangyi_info .zangyi_body ul p .jiage, .zangyi_body ul .daizi_info p .jiage, .daizi_info .zangyi_body ul p .jiage { width: 9.8rem; position: absolute; left: 5.5rem; bottom: .7rem; font-size: 0.7rem; line-height: 1.2rem; }
-.zangyi_body ul li .jiage b, .zangyi_body ul .zangyi_info p .jiage b, .zangyi_info .zangyi_body ul p .jiage b, .zangyi_body ul .daizi_info p .jiage b, .daizi_info .zangyi_body ul p .jiage b { font-size: 0.75rem; color: #f60; margin-right: .2rem; }
-.zangyi_body ul li:active, .zangyi_body ul .zangyi_info p:active, .zangyi_info .zangyi_body ul p:active, .zangyi_body ul .daizi_info p:active, .daizi_info .zangyi_body ul p:active, .zangyi_body ul li:visited, .zangyi_body ul .zangyi_info p:visited, .zangyi_info .zangyi_body ul p:visited, .zangyi_body ul .daizi_info p:visited, .daizi_info .zangyi_body ul p:visited { color: #333; }
-.zangyi_body ul li .number, .zangyi_body ul .zangyi_info p .number, .zangyi_info .zangyi_body ul p .number, .zangyi_body ul .daizi_info p .number, .daizi_info .zangyi_body ul p .number { position: absolute; right: .7rem; bottom: .7rem; line-height: 1.1rem; }
-.zangyi_body ul li .number i, .zangyi_body ul .zangyi_info p .number i, .zangyi_info .zangyi_body ul p .number i, .zangyi_body ul .daizi_info p .number i, .daizi_info .zangyi_body ul p .number i, .zangyi_body ul li .number span i { width: 1.2rem; height: 1.1rem; background: #2196f3; border: 0.05rem solid #2196f3; border-radius: .3rem; font-size: 1.25rem; color: #fff; text-align: center; display: block; float: left; }
-.zangyi_body ul li .number span, .zangyi_body ul .zangyi_info p .number span, .zangyi_info .zangyi_body ul p .number span, .zangyi_body ul .daizi_info p .number span, .daizi_info .zangyi_body ul p .number span { display: none; }
-.zangyi_body ul li .number span strong, .zangyi_body ul .zangyi_info p .number span strong, .zangyi_info .zangyi_body ul p .number span strong, .zangyi_body ul .daizi_info p .number span strong, .daizi_info .zangyi_body ul p .number span strong { width: 1.2rem; height: 1.1rem; border-radius: .3rem; text-align: center; float: left; display: block; line-height: 1.2rem; font-size: 0.75rem; background: #fff; color: #2196f3; border: 0.05rem solid #2196f3; margin: 0 .25rem; }
-.zangyi_body ul li .number span i, .zangyi_body ul .zangyi_info p .number span i, .zangyi_info .zangyi_body ul p .number span i, .zangyi_body ul .daizi_info p .number span i, .daizi_info .zangyi_body ul p .number span i { line-height: .9rem; color: #2196f3; background: #fff; border: 0.05rem solid #2196f3; }
+.submit { padding: 1rem .7rem; margin-bottom: 8.2rem; }
+.submit #submit, .submit #reset { width: 100%; height: 1.8rem; display: inline-block; color: #fff; font-size: 0.7rem; text-align: center; line-height: 1.8rem; border-radius: .2rem; background: #f80; }
+.submit #reset { background: #2196f3; margin-top: .8rem; }
 
-.paidan_tab li, .paidan_tab .zangyi_info p, .zangyi_info .paidan_tab p, .paidan_tab .daizi_info p, .daizi_info .paidan_tab p { width: 8rem; }
+.model { position: fixed; width: 16rem; height: 100%; background: rgba(0, 0, 0, 0.3); top: 0; z-index: 999; display: none; overflow: hidden; }
 
-.paidan_body { background: #f1f1f1; overflow: hidden; }
-.paidan_body ul li, .paidan_body ul .zangyi_info p, .zangyi_info .paidan_body ul p, .paidan_body ul .daizi_info p, .daizi_info .paidan_body ul p { background: #fff; box-shadow: 0 0 0.1rem #d5d5d5; margin: .5rem 0; padding: .7rem !important; }
-.paidan_body ul a { display: block; }
-.paidan_body ul a:active, .paidan_body ul a:visited { color: #333; }
+.zangyi_box { height: 11.5rem; background: #fff; position: absolute; bottom: 0; width: 16rem; z-index: 1000; }
 
-.zangyi_box { background: #f1f1f1; overflow: hidden; }
+.zangyi_tab, .paidan_tab { height: 2.2rem; border-bottom: 0.05rem solid #d5d5d5; background: #2196f3; }
+.zangyi_tab li, .paidan_tab li { height: 2.05rem; line-height: 2.05rem; float: left; text-align: center; font-size: 0.7rem; border-bottom: 0.1rem solid #2196f3; position: relative; color: #fff; }
+.zangyi_tab li i, .paidan_tab li i { width: 0.9rem; height: 0.9rem; line-height: 0.95rem; background: rgba(255, 51, 0, 0.85); border-radius: 100%; position: absolute; right: .3rem; top: .3rem; color: #fff; text-align: center; font-size: 0.6rem; display: none; }
+.zangyi_tab .tab_on, .paidan_tab .tab_on { border-bottom: .1rem solid #fff; }
 
-.code, .paidan_body ul li, .paidan_body ul .zangyi_info p, .zangyi_info .paidan_body ul p, .paidan_body ul .daizi_info p, .daizi_info .paidan_body ul p { line-height: 1rem; padding: .5rem .75rem; font-size: 0.65rem; background: #fff; box-shadow: 0 0 0.1rem #d5d5d5; }
-.code i, .paidan_body ul li i, .paidan_body ul .zangyi_info p i, .zangyi_info .paidan_body ul p i, .paidan_body ul .daizi_info p i, .daizi_info .paidan_body ul p i, .code .zangyi_body ul li .number span i, .zangyi_body ul li .number span .code i, .paidan_body .zangyi_body ul li .number span i, .zangyi_body .paidan_body ul li .number span i, .code .zangyi_body ul .zangyi_info p .number span i, .zangyi_body ul .zangyi_info p .number span .code i, .paidan_body .zangyi_body ul .zangyi_info p .number span i, .zangyi_body .paidan_body ul .zangyi_info p .number span i, .code .zangyi_info .zangyi_body ul p .number span i, .zangyi_info .zangyi_body ul p .number span .code i, .paidan_body .zangyi_info .zangyi_body ul p .number span li i, .paidan_body ul .zangyi_info .zangyi_body ul p .number span i, .zangyi_info .paidan_body .zangyi_body ul p .number span i, .zangyi_info .zangyi_body .paidan_body ul p .number span i, .code .zangyi_body ul .daizi_info p .number span i, .zangyi_body ul .daizi_info p .number span .code i, .paidan_body .zangyi_body ul .daizi_info p .number span i, .zangyi_body .paidan_body ul .daizi_info p .number span i, .code .daizi_info .zangyi_body ul p .number span i, .daizi_info .zangyi_body ul p .number span .code i, .paidan_body .daizi_info .zangyi_body ul p .number span li i, .paidan_body ul .daizi_info .zangyi_body ul p .number span i, .daizi_info .paidan_body .zangyi_body ul p .number span i, .daizi_info .zangyi_body .paidan_body ul p .number span i { float: right; margin-bottom: .3rem; }
-.code span, .paidan_body ul li span, .paidan_body ul .zangyi_info p span, .zangyi_info .paidan_body ul p span, .paidan_body ul .daizi_info p span, .daizi_info .paidan_body ul p span { color: #757575; font-size: 0.6rem; }
+.zangyi_body { height: 9rem; overflow-y: auto; }
+.zangyi_body ul { display: none; padding: .7rem; }
+.zangyi_body ul li { overflow: hidden; float: left; padding: .4rem .4rem; text-align: center; font-size: 0.6rem; border: 0.05rem solid #d5d5d5; margin: 0 .5rem .5rem 0; border-radius: .25rem; }
+.zangyi_body ul li:hover { color: #fff; background: #2196f3; border: 0.05rem solid #2196f3; }
 
-.zangyi_info, .daizi_info { margin: .5rem 0; background: #fff; box-shadow: 0 0 0.1rem #d5d5d5; padding: .7rem; }
-.zangyi_info h1, .daizi_info h1 { font-size: 0.75rem; font-weight: bold; color: #666; margin-bottom: 1rem; }
-.zangyi_info li, .daizi_info li, .zangyi_info p, .daizi_info p { font-size: 0; text-align: justify; line-height: 1rem; }
-.zangyi_info li span, .daizi_info li span, .zangyi_info p span, .daizi_info p span { width: 33.33%; display: inline-block; font-size: 0.65rem; }
-.zangyi_info li span:nth-last-child(1), .daizi_info li span:nth-last-child(1), .zangyi_info p span:nth-last-child(1), .daizi_info p span:nth-last-child(1) { text-align: right; }
-.zangyi_info li span:nth-last-child(2), .daizi_info li span:nth-last-child(2), .zangyi_info p span:nth-last-child(2), .daizi_info p span:nth-last-child(2) { text-align: center; }
-.zangyi_info p, .daizi_info p { padding-top: .5rem; margin-top: .5rem; border-top: 0.05rem solid #d5d5d5; }
-.zangyi_info p span:nth-last-child(1), .daizi_info p span:nth-last-child(1), .zangyi_info p span:nth-last-child(2), .daizi_info p span:nth-last-child(2) { color: #f33; }
+.paidan_tab { background: #fff; }
+.paidan_tab li { height: 2.1rem; line-height: 2.2rem; color: #333; width: 8rem; border-bottom: .1rem solid #fff; }
 
-.daizi_info { margin-bottom: 0; }
-.daizi_info textarea { width: 13.3rem; font-size: 0.6rem; padding: .5rem .6rem; margin-bottom: .7rem; border: .05rem solid #ddd; height: 3.5rem; line-height: 1rem; border-radius: .2rem; }
-.daizi_info input[type="submit"] { width: 14.6rem; border: none; font-size: 0.6rem; text-align: center; border-radius: .15rem; padding: .6rem 0; margin: .2rem 0 .2rem; background: #2196f3; display: block; color: #fff; }
+.active { border-bottom: 0.1rem solid #2196f3 !important; }
 
-.why { font-size: 0.6rem; border: none; height: 3.5rem; line-height: 1rem; border-radius: .2rem; }
+.paidan_body, .daizi_body { background: #f1f1f1; overflow: hidden; }
+.paidan_body li, .daizi_body li { background: #fff; line-height: 1rem; font-size: 0.7rem; box-shadow: 0 0 0.1rem #d5d5d5; margin: .5rem 0; padding: .7rem !important; }
+.paidan_body li i, .daizi_body li i { float: right; margin-bottom: .5rem; }
+.paidan_body li span, .daizi_body li span { color: #757575; }
+.paidan_body a, .daizi_body a { display: block; }
+.paidan_body a:active, .daizi_body a:active, .paidan_body a:visited, .daizi_body a:visited { color: #333; }
+
+.why { font-size: 0.7rem; border: none; height: 3.5rem; line-height: 1rem; }
+
+.add_daizi { font-size: 0.7rem; border: none; line-height: 1rem; }
+
+.daizi_body p { line-height: 1rem; overflow: hidden; }
+.daizi_body i { color: #757575; position: absolute; right: .7rem; }
+.daizi_body span { margin-top: .25rem; width: 33.33%; float: left; }
+.daizi_body span:nth-last-child(1) { color: #f33; margin-right: 0; text-align: right; }
+.daizi_body span:nth-last-child(2) { color: #f33; text-align: center; }
+
+.jiesuan { border-top: .05rem solid #e7e7e7; padding: .7rem; font-size: 0.7rem; }
+
+.zongjia h1 { font-size: 0.75rem; margin-bottom: .6rem; }
+.zongjia p { line-height: 1rem; overflow: hidden; }
+.zongjia span { margin-top: .25rem; width: 33.33%; float: left; }
+.zongjia span:nth-last-child(1) { color: #f33; margin-right: 0; text-align: right; }
+.zongjia span:nth-last-child(2) { color: #f33; text-align: center; }
+
+.daizi_btn { margin: 1rem 0; }
+.daizi_btn a { width: 7rem; height: 2rem; display: inline-block; color: #fff; font-size: 0.7rem; text-align: center; line-height: 2rem; border-radius: .2rem; }
+.daizi_btn #shouyin { background: #2196f3; float: right; }
+.daizi_btn #tuidan { background: #f80; }
 
 .user, .password { margin: 1.5rem .7rem .8rem; width: 14.6rem; height: 2.1rem; margin: .7rem; background: #fff; border: .05rem solid #e3e3e3; border-radius: .15rem; overflow: hidden; }
 .user input, .password input { border: none; font-size: 0.65rem; height: .7rem; line-height: .9rem; padding: .7rem; width: 11.4rem; background: url(../images/login.png) no-repeat 6% center; background-size: .85rem; padding-left: 2.5rem; color: #757575; }
@@ -181,9 +196,9 @@ body { font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif; background
 .login p { font-size: 0.6rem; color: #333; line-height: 1rem; margin-bottom: .5rem; }
 
 .foot_nav { width: 16rem; position: fixed; bottom: 0rem; display: block; z-index: 999; height: 2.3rem; padding-top: .2rem; border-top: .05rem solid #e7e7e7; background: #fff; }
-.foot_nav li, .foot_nav .zangyi_info p, .zangyi_info .foot_nav p, .foot_nav .daizi_info p, .daizi_info .foot_nav p { width: 5.33333rem; float: left; text-align: center; position: relative; }
-.foot_nav li a, .foot_nav .zangyi_info p a, .zangyi_info .foot_nav p a, .foot_nav .daizi_info p a, .daizi_info .foot_nav p a { display: block; font-size: 0.6rem; color: #757575; }
-.foot_nav li i, .foot_nav .zangyi_info p i, .zangyi_info .foot_nav p i, .foot_nav .daizi_info p i, .daizi_info .foot_nav p i, .foot_nav .zangyi_body ul li .number span i, .zangyi_body ul .foot_nav li .number span i, .zangyi_body ul li .number span .foot_nav .zangyi_info p i, .zangyi_body ul li .number span .zangyi_info .foot_nav p i, .zangyi_body ul li .number span .foot_nav .daizi_info p i, .zangyi_body ul li .number span .daizi_info .foot_nav p i, .zangyi_body ul .zangyi_info p .number span .foot_nav li i, .foot_nav .zangyi_body ul .zangyi_info p .number span i, .zangyi_body ul .foot_nav .zangyi_info p .number span i, .zangyi_body ul .zangyi_info .foot_nav p .number span i, .zangyi_info .zangyi_body ul p .number span .foot_nav li i, .foot_nav .zangyi_info .zangyi_body ul p .number span i, .zangyi_info .foot_nav .zangyi_body ul p .number span i, .zangyi_info .zangyi_body ul .foot_nav p .number span i, .zangyi_body ul .daizi_info p .number span .foot_nav li i, .foot_nav .zangyi_body ul .daizi_info p .number span i, .zangyi_body ul .foot_nav .daizi_info p .number span i, .zangyi_body ul .daizi_info .foot_nav p .number span i, .daizi_info .zangyi_body ul p .number span .foot_nav li i, .foot_nav .daizi_info .zangyi_body ul p .number span i, .daizi_info .foot_nav .zangyi_body ul p .number span i, .daizi_info .zangyi_body ul .foot_nav p .number span i { width: 0.9rem; height: 0.9rem; line-height: 0.95rem; display: block; background: rgba(255, 51, 0, 0.85); border-radius: 100%; position: absolute; right: 1.7rem; top: 0rem; display: none; color: #fff; text-align: center; font-size: 0.6rem; }
+.foot_nav li { width: 5.33333rem; float: left; text-align: center; position: relative; }
+.foot_nav li a { display: block; font-size: 0.6rem; color: #757575; }
+.foot_nav li i { width: 0.9rem; height: 0.9rem; line-height: 0.95rem; display: block; background: rgba(255, 51, 0, 0.85); border-radius: 100%; position: absolute; right: 1.7rem; top: 0rem; display: none; color: #fff; text-align: center; font-size: 0.6rem; }
 .foot_nav .icon-shouye:before, .foot_nav .icon-yifu:before, .foot_nav .icon-quanbudingdan:before { font-size: 1.25rem; }
 .foot_nav .nav_on { color: #2196f3; }
 .foot_nav .show { display: block; }

@@ -5,112 +5,108 @@ $(document).ready(function(){
 			slideCell:"#paidan_box",  //包围体
 			titCell:".paidan_tab li", //导航标签
 			mainCell:".paidan_body",  //切换元素包裹层
-			titOnClassName:"tab_on",  //选中状态添加class
+			titOnClassName:"active",  //选中状态添加class
 	})
 
 	/*脏衣篮选项卡*/
 	$(".zangyi_tab li").click(function(){
 		$(this).addClass("tab_on").siblings().removeClass("tab_on");
-		$(".zangyi_body>ul").eq($(this).index()).show().siblings().hide();	
+		$(".zangyi_body>ul").eq($(this).index()).show().siblings().hide();
     });
 
     /*监听函数*/
     var number = function(){
-        //单件数量
-    	$(".number strong").each(function(){
-			if($(this).text() > 0){
-				$(this).parent().show();
-			}else{
-				$(this).parent().hide();
-			}
-		});
 
-        //tab角标
-        $(".zangyi_tab i").each(function(){
-            if($(this).text() > 0){
-                $(this).show();
-            }else{
-                $(this).hide();
-            }
-        });
+		//遍历衣物
+		var num = 0;
+		var price = 0;
+		$(".zangyi_info li").each(function(){
+			var single = $(this).find("b").text();	
+			num++;
+			price += parseInt(single);
+		})
+		//总数量
+		$(".zangyi_info strong b").text(num);
+		//总价格
+		$(".zangyi_info>p>i>b").text(price);
+		
+		//为空时显示暂无内容
+		if(num == 0){
+			$(".zangyi_info h2").slideDown();
+		}else{
+			$(".zangyi_info h2").slideUp();
+		}
 
-        //底部角标
-        $(".foot_nav i").each(function(){
-            if($(this).text() > 0){
-                $(this).show();
-            }else{
-                $(this).hide();
-           }
-        });
-
-        //分类数量
-        $(".zangyi_body ul").each(function(){
-            var fenlei = 0;
-            $(this).find("li").each(function(){
-                if($(this).find("span").css("display") != "none"){
-                    fenlei += parseInt($(this).find("strong").text());
-                }
-            });
-            $(".zangyi_tab li").eq($(this).index()).find("i").text(fenlei);
-        });
-
-        //总数量
-        var all = 0;
-        $(".number span").each(function(){
-            if($(this).css("display") != "none"){
-                all +=  parseInt($(this).find("strong").text());
-            }
-        });
-        $(".foot_nav li").eq(2).find("i").text(all);
+		//删除衣物
+		$(".zangyi_info span").click(function(){
+			$(this).parent().remove();
+		})	
     };
-    window.setInterval(number);
+    window.setInterval(number,100);
 	
-	//增加数量
-	$(".number i:contains('+')").click(function(){
-        num = $(this).prev().find("strong").text();
-        $(this).prev().find("strong").text(parseInt(num) + 1);
-    });
+	//添加衣物显示框
+    $(".zangyi").click(function(){
+    	$(".model").fadeIn(500);
+    	//横向滚动条
+    	var swiper = new Swiper('.zangyi_tab', {
+                slidesPerView: 4.5,
+                paginationClickable: true,
+                freeMode: true
+        });
+    })
 
-	//减少数量
-    $(".number i:contains('-')").click(function(){
-        num = $(this).next().text();
-        if(num <= 0){
-        	num == 0;
-        }else{
-        	$(this).next().text(parseInt(num) - 1);
-        }
-    });
+    //关闭衣物窗口
+    $(".model").click(function(){
+    	$(this).fadeOut();
+    })
 
-    //脏衣篮信息
-    $(".foot_nav>ul>li").eq(2).click(function(e){
-       if($(this).find("i").text() <= 0){
-       	  layer.open({
-               content:'脏衣篮内暂无衣物'
-          })
-          e.preventDefault();
-       }
+    //阻止冒泡
+    $(".zangyi_box").click(function(e){
+    	e.stopPropagation();
+    })
+	
+	//增加衣服
+	var yifu = $(".zangyi_body li").text();
+	$(".zangyi_body li").click(function(){
+		var yifu_name = $(this).text(),
+			yifu_price = $(this).attr("data-price");
+			num = $(".zangyi_info li").length;
+		if(num > 1){
+			$(".zangyi_info li:last-child").after('<li><strong>' + yifu_name + '</strong><span>x</span><i><b>' + yifu_price + '</b> 元</i></li>');
+		}else{
+			$(".zangyi_info>ul>h2").after('<li><strong>' + yifu_name + '</strong><span>x</span><i><b>' + yifu_price + '</b> 元</i></li>');
+		}
+		
     });
 
     //提交按钮
-    $(".header span a").click(function(e){
+    $("#submit").click(function(e){
        var info = '';
-       $(".zangyi_body li").each(function(){
-           var zanyifu = $(this).find("strong").text();
+       var zanyifu = $(".zangyi_info li").length;
+       $(".zangyi_info li").each(function(){
+           var single = $(this).find("b").text();	
            if( zanyifu > 0){
-               info += $(this).find("h1").text() + '.........................x' + zanyifu + '<br/>';
+               info += $(this).find("strong").text() + '.........................' + single + ' 元<br/>';
            }
        });
-       if(info){
+       if(zanyifu){
            layer.open({
                content: info,
+               style: 'width:300px; border:none;',
                btn: ['确认', '修改'],
                shadeClose: false,
                yes: function () {
-                   layer.open({content: '下单成功', time: 1});
-                   var GoTo = function(){
-					location.href="xiadan.html"
-					}
-					window.setInterval(GoTo,800); 
+                   layer.open({
+                   		content: '下单成功', time: 1,
+						success: function(){	  
+							//这里是选择了确认的回调函数
+							var GoTo = function(){
+							location.href="daizi.html"
+							}
+							window.setInterval(GoTo,800);
+						}
+                   });
+                    
                }, no: function () {
                    layer.close();
                }
@@ -123,10 +119,94 @@ $(document).ready(function(){
        e.preventDefault();
     })
 
-    //退单
-    $(".header span:contains('退单')").click(function(e){
+    //清空按钮
+    $("#reset").click(function(){
     	layer.open({
-			content: '<textarea class="why" placeholder="请描述退单原因" maxlength="150"></textarea>',
+			content: '删除将无法恢复，是否确认删除？',
+			btn: ['确认', '关闭'],
+			shadeClose: false,
+			yes: function(){
+				layer.open({
+					content: '已删除', time: 1,
+					success: function(){	  
+						$(".zangyi_info li").remove();  //这里是选择了确认的回调函数
+					}
+				});			
+			}, no: function(){
+				layer.close();
+			}
+		});	
+    })
+
+    //添加袋子
+    $(".daizi").click(function(){
+    	layer.open({
+    		title: '添加袋子',
+			content: '<input type="tel" class="add_daizi" placeholder="请填写袋子编号..." maxlength="16">',
+			style: 'width:300px; border:none;',
+			btn: ['按件', '按袋'],
+			shadeClose: false,
+			yes: function(){
+				var id = $(".add_daizi").val();
+				layer.open({
+					content: '您的袋子编号：' + id + ' 按件', time: 1,
+					success: function(){
+						//这里是选择了按件的回调函数
+						var GoTo = function(){
+						location.href="zangyi.html"
+						}
+						window.setInterval(GoTo,800); 
+					}
+				});
+			}, no: function(){
+				var id = $(".add_daizi").val();
+				layer.open({
+					content: '您的袋子编号：' + id + ' 按袋', time: 1,
+					success: function(){
+						//这里是选择了按袋的回调函数
+						var GoTo = function(){
+						location.href="zangyi.html"
+						}
+						window.setInterval(GoTo,800); 
+					}
+				});
+			}
+		});	
+    })
+
+    //删除袋子
+    $(".daizi_body li i").click(function(){
+    	var daizi = $(this).parents("li");
+    	layer.open({
+			content: '删除将无法恢复，是否确认删除？',
+			btn: ['确认', '关闭'],
+			shadeClose: false,
+			yes: function(){
+				layer.open({
+					content: '已删除', time: 1,
+					success: function(){	  
+						daizi.remove();  //这里是选择了确认的回调函数
+					}
+				});			
+			}, no: function(){
+				layer.close();
+			}
+		});	
+    })
+
+    //收银
+    $("#shouyin").click(function(){
+    	var num = $(".daizi_body li").length;
+    	if(!num){
+    		layer.open({content: '请先添加袋子', time: 1});		
+    	}
+    })
+
+    //退单
+    $("#tuidan").click(function(e){
+    	layer.open({
+			content: '<textarea class="why" placeholder="请描述退单原因..." maxlength="150"></textarea>',
+			style: 'width:300px; border:none;',
 			btn: ['确认', '关闭'],
 			shadeClose: false,
 			yes: function(){
@@ -139,7 +219,6 @@ $(document).ready(function(){
 				layer.close();
 			}
 		});	
-		e.preventDefault();
     })
 	
 	//派送信息
@@ -147,6 +226,7 @@ $(document).ready(function(){
 		var obj = $(this);
 		layer.open({
 			content: '是否完成派件送达？',
+			style: 'width:300px; border:none;',
 			btn: ['是的', '没有'],
 			shadeClose: false,
 			yes: function(){
@@ -158,7 +238,8 @@ $(document).ready(function(){
 				});	  
 			}, no: function(){
 				layer.open({
-					content: '<textarea class="why" placeholder="请描述未送达原因" maxlength="150"></textarea>',
+					content: '<textarea class="why" placeholder="请描述未送达原因..." maxlength="150"></textarea>',
+					style: 'width:300px; border:none;',
 					btn: ['提交', '按错了'],
 					shadeClose: false,
 					yes: function(){

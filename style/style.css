@@ -72,48 +72,13 @@ html { font-size: 20px; }
   select:hover { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAaUlEQVQoz2P4//8/A7UwdkEGhiggTsODo4g2LBEImJmZvwE1/UfHIHGQPNGGAbHCggULFrKxsf1ENgjEB4mD5EnxJoaByAZB5Yk3DNlAPj6+L8gGkWUYzMC3b982IRtEtmFQjaxYxDAwAGi4TwMYKNLfAAAAAElFTkSuQmCC"); }
   select:active { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAaUlEQVQoz2P4//8/A7UwdkEGhiggTsODo4g2LBEImJmZvwE1/UfHIHGQPNGGAbHCggULFrKxsf1ENgjEB4mD5EnxJoaByAZB5Yk3DNlAPj6+L8gGkWUYzMC3b982IRtEtmFQjaxYxDAwAGi4TwMYKNLfAAAAAElFTkSuQmCC"); }
   select:disabled { color: #999; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAaUlEQVQoz2P4//8/A7UwdkEGhiggTsODo4g2LBEImJmZvwE1/UfHIHGQPNGGAbHCggULFrKxsf1ENgjEB4mD5EnxJoaByAZB5Yk3DNlAPj6+L8gGkWUYzMC3b982IRtEtmFQjaxYxDAwAGi4TwMYKNLfAAAAAElFTkSuQmCC"), -webkit-linear-gradient(#f8f8f8, #f8f8f8 38%, #f8f8f8); } }
-@font-face { font-family: "iconfont"; src: url("iconfont.eot");
-  /* IE9*/
-  src: url("iconfont.eot?#iefix") format("embedded-opentype"), url("iconfont.woff") format("woff"), url("iconfont.ttf") format("truetype"), url("iconfont.svg#iconfont") format("svg");
-  /* iOS 4.1- */ }
-.iconfont { font-family: "iconfont" !important; font-style: normal; -webkit-font-smoothing: antialiased; -webkit-text-stroke-width: 0; -moz-osx-font-smoothing: grayscale; }
-
-/* .icon-houtui:before { content: "\e600"; } */
-.icon-shouye:before { content: "\e601"; }
-
-.icon-wo:before { content: "\e602"; }
-
-.icon-quanbudingdan:before { content: "\e603"; }
-
-.icon-chaxun:before { content: "\e604"; }
-
-.icon-wentizixun:before { content: "\e605"; }
-
-.icon-fanwei:before { content: "\e606"; }
-
-.icon-yijianfankui:before { content: "\e608"; }
-
-.icon-lianxizixun:before { content: "\e609"; }
-
-.icon-shouz:before { content: "\e60e"; }
-
-.icon-yifu:before { content: "\e607"; }
-
-.icon-shopping:before { content: "\e60a"; }
-
-.icon-wuliuxingye:before { content: "\e60b"; }
-
-.icon-dingdan:before { content: "\e60c"; }
-
-.icon-sort:before { content: "\e60d"; }
-
-.icon-baodijine:before { content: "\e60f"; }
-
-.icon-shijian:before { content: "\e610"; }
-
 body { font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif; background: #fff; }
 
-.warp { width: 16rem; overflow: hidden; }
+.wrap { width: 16rem; overflow: hidden; }
+
+.clearfloat:after { display: block; clear: both; content: ""; visibility: hidden; height: 0; }
+
+.clearfloat { zoom: 1; }
 
 .header { height: 2.5rem; color: #fff; line-height: 2.5rem; background: #2196f3; padding: 0 .7rem; }
 .header .logo { width: 4.8rem; float: left; text-indent: -99rem; font-size: 0.75rem; background: url(../images/applogo.png) no-repeat left; background-size: 100%; }
@@ -154,7 +119,7 @@ body { font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif; background
 
 .active { border-bottom: 0.1rem solid #2196f3 !important; }
 
-.paidan_body, .daizi_body { background: #f1f1f1; overflow: hidden; }
+.paidan_body, .daizi_body { width: 16rem; background: #f1f1f1; overflow: hidden; }
 .paidan_body li, .daizi_body li { background: #fff; line-height: 1rem; font-size: 0.7rem; box-shadow: 0 0 0.1rem #d5d5d5; margin: .5rem 0; padding: .7rem !important; }
 .paidan_body li i, .daizi_body li i { float: right; margin-bottom: .5rem; }
 .paidan_body li span, .daizi_body li span { color: #757575; }
@@ -174,6 +139,7 @@ body { font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif; background
 .jiesuan { border-top: .05rem solid #e7e7e7; padding: .7rem; font-size: 0.7rem; }
 
 .zongjia h1 { font-size: 0.75rem; margin-bottom: .6rem; }
+.zongjia h1 b { float: right; color: #757575; }
 .zongjia p { line-height: 1rem; overflow: hidden; }
 .zongjia span { margin-top: .25rem; width: 33.33%; float: left; }
 .zongjia span:nth-last-child(1) { color: #f33; margin-right: 0; text-align: right; }
@@ -182,7 +148,23 @@ body { font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif; background
 .daizi_btn { margin: 1rem 0; }
 .daizi_btn a { width: 7rem; height: 2rem; display: inline-block; color: #fff; font-size: 0.7rem; text-align: center; line-height: 2rem; border-radius: .2rem; }
 .daizi_btn #shouyin { background: #2196f3; float: right; }
-.daizi_btn #tuidan { background: #f80; }
+.daizi_btn #fenjie { background: #f80; }
+
+.pay { background: #2196f3; }
+.pay i { color: #FFFF80; }
+.pay .pay_info { color: #fff; padding: .4rem .7rem .7rem; }
+.pay .pay_info p { font-size: 0.7rem; line-height: 1.4rem; }
+.pay .pay_info p b { float: right; }
+.pay .pay_state { color: #fff; margin: 0 .7rem; border-top: .05rem dashed #fff; padding: .6rem 0; }
+.pay .pay_state h3 { font-size: 0.7rem; line-height: 1.4rem; }
+
+.pay_btn { margin: 0 .7rem; }
+.pay_btn h1 { text-align: center; padding: 1.3rem 0 0; font-size: 0.85rem; font-weight: bold; color: #2196f3; }
+.pay_btn h1 i { margin-right: .3rem; color: #2196f3; }
+.pay_btn a { width: 100%; height: 2rem; margin-bottom: .9rem; display: inline-block; color: #fff; font-size: 0.7rem; text-align: center; line-height: 2rem; border-radius: .2rem; }
+.pay_btn #cash { background: #f70; margin-top: 1.5rem; }
+.pay_btn #card { background: #2196f3; }
+.pay_btn #pay { background: #FF5C57; }
 
 .user, .password { margin: 1.5rem .7rem .8rem; width: 14.6rem; height: 2.1rem; margin: .7rem; background: #fff; border: .05rem solid #e3e3e3; border-radius: .15rem; overflow: hidden; }
 .user input, .password input { border: none; font-size: 0.65rem; height: .7rem; line-height: .9rem; padding: .7rem; width: 11.4rem; background: url(../images/login.png) no-repeat 6% center; background-size: .85rem; padding-left: 2.5rem; color: #757575; }
@@ -191,7 +173,7 @@ body { font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif; background
 .password input { background: url(../images/password.png) no-repeat 6% center; background-size: .75rem; padding-left: 2.5rem; }
 
 .login { width: 14.6rem; margin: .8rem .7rem; }
-.login a { font-size: 0.7rem; text-align: center; border-radius: .15rem; padding: .5rem 0; background: #2196f3; display: block; color: #fff; }
+.login a { font-size: 0.7rem; text-align: center; border-radius: .15rem; line-height: 2rem; background: #2196f3; display: block; color: #fff; }
 .login input[type="submit"] { width: 14.6rem; border: none; font-size: 0.6rem; text-align: center; border-radius: .15rem; padding: .6rem 0; background: #2196f3; display: block; color: #fff; }
 .login p { font-size: 0.6rem; color: #333; line-height: 1rem; margin-bottom: .5rem; }
 

@@ -41,6 +41,14 @@ $(document).ready(function(){
 		$(".zangyi_info span").click(function(){
 			$(this).parent().remove();
 		})	
+
+		//收银统计
+		var cash = parseInt($(".cash").text()),
+			card = parseInt($(".card").text()),
+			money = parseInt($(".money").text());
+		var now = cash + card;
+		$(".Payment").text(now);
+		$(".yuer").text(money - now);
     };
     window.setInterval(number,100);
 	
@@ -199,6 +207,53 @@ $(document).ready(function(){
     	var num = $(".daizi_body li").length;
     	if(!num){
     		layer.open({content: '请先添加袋子', time: 1});		
+    	}
+    })
+
+	//现金支付
+    $("#cash").click(function(){
+    	layer.open({
+    		title:'现金支付',
+			content: '<input type="tel" class="add_daizi" placeholder="请填支付金额..." maxlength="16">',
+			style: 'width:300px; border:none;',
+			btn: ['确认'],
+			yes: function(index){
+				//这里是回调函数
+				var val = $(".add_daizi").val();
+				$(".cash").text(val);
+				layer.close(index);
+			}
+		});
+    })
+
+    //刷卡支付
+    $("#card").click(function(){
+    	layer.open({
+    		title:'刷卡',
+			content: '<input type="tel" class="add_daizi" placeholder="请填支付金额..." maxlength="16">',
+			style: 'width:300px; border:none;',
+			btn: ['确认'],
+			yes: function(index){
+				//这里是回调函数
+				var val = $(".add_daizi").val();
+				$(".card").text(val);
+				layer.close(index);
+			}
+		});
+    })	
+
+    //支付提交
+    $("#pay").click(function(){
+    	var yuer = $(".yuer").text();
+    	if(yuer > 0){
+    		layer.open({content: '还未完成收银', time: 1});
+    	}else{
+    		layer.open({
+				content: '收银成功', time: 1,
+				success: function(){
+					//这里是回调函数
+				}
+			});	  
     	}
     })
 

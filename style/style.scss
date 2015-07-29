@@ -1,7 +1,7 @@
 //样式重置
 @import "reset";
 @import "mixin";
-@import "font";
+//@import "font";
 
 $body_width:16rem;
 $box-shadow:#bbb;
@@ -14,11 +14,24 @@ body{
 	font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
 	background:#fff;
 }
-.warp{
+.wrap{
 	width:$body_width;
 	overflow:hidden;
 	//padding-bottom:$foot_height;
 }
+
+//清除浮动代码
+.clearfloat:after{
+	display:block;
+	clear:both;
+	content:"";
+	visibility:hidden;
+	height:0
+}
+.clearfloat{
+	zoom:1
+}
+
 //头部
 .header{
 	$h:2.5rem;
@@ -216,6 +229,7 @@ body{
 	border-bottom:.1rem solid $nav_color !important;	
 }
 .paidan_body{
+	width:$body_width;
 	background:#f1f1f1;
 	overflow:hidden;
 		li{
@@ -291,6 +305,10 @@ body{
 	h1{
 		@include font_rem(30);
 		margin-bottom:.6rem;
+		b{
+			float:right;
+			color:#757575;
+		}
 	}
 	p{
 		line-height:1rem;
@@ -327,8 +345,72 @@ body{
 		background:$nav_color;
 		float:right;
 	}
-	#tuidan{
+	#fenjie{
 		background:#f80;
+	}
+}
+
+//收银
+.pay{
+	background:$nav_color;
+	i{
+		color:#FFFF80;
+	}
+	.pay_info{
+		color:#fff;
+		padding:.4rem .7rem .7rem;
+		p{
+			@include font_rem(28);
+			line-height:1.4rem;
+			b{
+				float:right;
+			}
+		}	
+	}
+	.pay_state{
+		color:#fff;
+		margin:0 .7rem;
+		border-top:.05rem dashed #fff;
+		padding:.6rem 0;
+		h3{
+			@include font_rem(28);
+			line-height:1.4rem;
+		}
+	}	
+}
+.pay_btn{
+	margin:0 .7rem;
+	h1{
+		text-align:center;
+		padding:1.3rem 0 0;
+		@include font_rem(34);
+		font-weight:bold;
+		color:$nav_color;
+		i{
+			margin-right:.3rem;
+			color:$nav_color;
+		}
+	}
+	a{
+		width:100%;
+		height:2rem;
+		margin-bottom:.9rem;
+		display:inline-block;
+		color:#fff;
+		@include font_rem(28);
+		text-align:center;
+		line-height:2rem;
+		border-radius:.2rem;
+	}
+	#cash{
+		background:#f70;
+		margin-top:1.5rem;
+	}
+	#card{
+		background:$nav_color;
+	}
+	#pay{
+		background:#FF5C57;
 	}
 }
 
@@ -374,7 +456,7 @@ body{
     	@include font_rem(28);
     	text-align:center;
     	border-radius:.15rem;
-    	padding:.5rem 0;
+    	line-height:2rem;
     	background:$nav_color;
     	display:block;
     	color:#fff;

@@ -24,46 +24,24 @@
 <div class="wrap">
     <!--头部-->
     <div class="header">
-        <span class="daizi">+&nbsp;&nbsp;添加袋子</span>
-        <div class="details"><a href="dingdan.html" class="iconfont icon-houtui">分拣衣物</a></div>
+        <div class="details"><a href="daizi.html" class="iconfont icon-houtui">收银</a></div>
     </div>
-    <!--添加袋子-->
-    <div class="daizi_body">
-        <ul>
-            <li>
-               <i>删除</i>
-               <a href="zangyi.html">            
-                   <p>袋子编号: 12345687</p>
-                   <p><span>按件合计</span> <span>10 件</span> <span>205 元</span></p>
-               </a>
-            </li>
-            <li>
-               <i>删除</i>
-               <a href="zangyi.html">            
-                   <p>袋子编号: 12345687</p>
-                   <p><span>按件合计</span> <span>5 件</span> <span>85 元</span></p>
-               </a>
-            </li>
-            <li>
-               <i>删除</i>
-               <a href="zangyi.html">            
-                   <p>袋子编号: 12345687</p>
-                   <p><span>按袋合计</span> <span>10 件</span> <span>78 元</span></p>
-               </a>
-            </li>
-        </ul>
-    </div>
-    <div class="jiesuan">
-        <div class="zongjia">
-            <h1><b id="tuidan">退单</b>订单详情（单号: 12125455）</h1>
-            <p><span>合计</span> <span>1 袋 15 件</span> <span>368 元</span></p>
+    <!--支付信息-->
+    <div class="pay">
+        <div class="pay_info">
+            <p><b>应付款：<i class="money">368</i> 元</b>订单号：1058</p>
+            <p><b>已付金额：<i class="Payment">368</i> 元</b>数量：1 袋 5 件</p>
+        </div>  
+        <div class="pay_state">
+            <h3>实收金额：现金 <i class="cash">0</i> 元，刷卡 <i class="card">0</i> 元</h3>
+            <h3>还应支付： <i class="yuer">0</i> 元</h3>
         </div>
-        <div class="daizi_btn">
-            <a href="javascript:;" id="fenjie">分 解</a>
-            <a href="pay.html" id="shouyin">收 银</a>
-        </div>
+    </div> 
+    <div class="pay_btn">
+        <a href="javascript:;" id="cash">现金支付</a>
+        <a href="javascript:;" id="card">刷卡支付</a>
+        <a href="javascript:;" id="pay">确认提交</a>
     </div>
 </div>
-
 </body>
 </html>

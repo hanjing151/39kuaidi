@@ -235,17 +235,24 @@ body{
 		li{
 			background:#fff;
 			line-height:1rem;
-			@include font_rem(28);
+			@include font_rem(26);
 			box-shadow:0 0 .1rem $input-shadow;
 			margin:.5rem 0;
 			padding:.7rem !important;
 			i{ 
 				float:right;
-				margin-bottom:.5rem;
+				line-height:1.2rem;
 			}
 			span{
 				color:#757575;
+				line-height:1.2rem;
 			}
+			p{
+				line-height:1.2rem;
+			}
+		}
+		.bianhao{
+			color:$nav_color;
 		}
 		a{
 			display:block;
@@ -301,10 +308,9 @@ body{
 	@include font_rem(28);
 }
 .zongjia{
-
 	h1{
-		@include font_rem(30);
-		margin-bottom:.6rem;
+		@include font_rem(28);
+		margin-bottom:.5rem;
 		b{
 			float:right;
 			color:#757575;

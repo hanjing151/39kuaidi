@@ -120,9 +120,11 @@ body { font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif; background
 .active { border-bottom: 0.1rem solid #2196f3 !important; }
 
 .paidan_body, .daizi_body { width: 16rem; background: #f1f1f1; overflow: hidden; }
-.paidan_body li, .daizi_body li { background: #fff; line-height: 1rem; font-size: 0.7rem; box-shadow: 0 0 0.1rem #d5d5d5; margin: .5rem 0; padding: .7rem !important; }
-.paidan_body li i, .daizi_body li i { float: right; margin-bottom: .5rem; }
-.paidan_body li span, .daizi_body li span { color: #757575; }
+.paidan_body li, .daizi_body li { background: #fff; line-height: 1rem; font-size: 0.65rem; box-shadow: 0 0 0.1rem #d5d5d5; margin: .5rem 0; padding: .7rem !important; }
+.paidan_body li i, .daizi_body li i { float: right; line-height: 1.2rem; }
+.paidan_body li span, .daizi_body li span { color: #757575; line-height: 1.2rem; }
+.paidan_body li p, .daizi_body li p { line-height: 1.2rem; }
+.paidan_body .bianhao, .daizi_body .bianhao { color: #2196f3; }
 .paidan_body a, .daizi_body a { display: block; }
 .paidan_body a:active, .daizi_body a:active, .paidan_body a:visited, .daizi_body a:visited { color: #333; }
 
@@ -138,7 +140,7 @@ body { font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif; background
 
 .jiesuan { border-top: .05rem solid #e7e7e7; padding: .7rem; font-size: 0.7rem; }
 
-.zongjia h1 { font-size: 0.75rem; margin-bottom: .6rem; }
+.zongjia h1 { font-size: 0.7rem; margin-bottom: .5rem; }
 .zongjia h1 b { float: right; color: #757575; }
 .zongjia p { line-height: 1rem; overflow: hidden; }
 .zongjia span { margin-top: .25rem; width: 33.33%; float: left; }
